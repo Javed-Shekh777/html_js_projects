@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(45deg, aqua, pink, violet);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 100px;
+            /*align-items: center;
+            justify-content: center;
+            margin-left: 400px; */
+        }
+
+        h1 {
+            margin-top: 50px;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        input {
+            padding: 15px 10px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            box-shadow: 1px 2px 4px 2px black;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            margin-left: 20px;
+            color: #fff;
+            cursor: pointer;
+            background-color: blue;
+            font-size: 20px;
+            box-shadow: 2px 4px 7px 3px;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+    </script>
+</head>
+
+<body>
+    <h1>QR Code Generator</h1>
+    <div class="container">
+        <input type="text" class="input" />
+        <button class="button">Generate Qr</button>
+    </div>
+    <div id="qr" style="margin-top: 20px;"></div>
+
+
+
+
+    <script src="./qrcode.js"></script>
+</body>
+
+</html>

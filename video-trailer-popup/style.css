@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+    background: black;
+    color: #fff;
+}
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 15px;
+}
+
+.container .title {
+    font-size: 30px;
+}
+
+.container button {
+    padding: 8px 12px;
+    width: fit-content;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: orange;
+    color: #000;
+}
