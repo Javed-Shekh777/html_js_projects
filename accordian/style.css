@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button{
+  cursor: pointer;
+}
+.accordion {
+  margin: 10px;
+  margin-top: 30px;
+  max-width: 40rem;
+  width: 35rem;
+  flex-wrap: wrap;
+}
+
+.accordion .accordion-item {
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.accordion .accordion-item .accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  margin: 0;
+ 
+  transition: all 0.3s ease-in-out;
+
+  font-size: 18px;
+}
+
+.accordion .accordion-item .accordion-header button {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: flex;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  background: #c4a64a;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.accordion .accordion-item .accordion-content {
+  padding: 15px;
+  display: none;
+  background: #f8f8f8;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion .accordion-item.active .accordion-content {
+  display: block;
+}
+
+.form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+}
+.form.active{
+  display: block;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.wrapper form {
+  padding: 20px;
+  max-width: 40rem;
+  width: 40rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 30px;
+}
+.wrapper form .group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.wrapper form .group label {
+  font-size: 1.1rem;
+  color: black;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.wrapper form .group input,
+.wrapper form .group textarea {
+  height: 45px;
+  font-size: 1rem;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 4px 10px;
+  resize: none;
+  outline: none;
+}
+.wrapper form .group input:focus,
+.wrapper form .group textarea:focus {
+  border: 2px solid rgb(29, 211, 29);
+}
+
+.wrapper form button,
+.addBtn {
+  padding: 15px 20px;
+  margin: 0 auto;
+  text-align: center;
+  border: none;
+  outline: none;
+  margin: 10px auto;
+  background: rgb(16, 16, 215);
+  color: #fff;
+  border-radius: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.wrapper form button:hover {
+  background: blue;
+}
+.wrapper .cut {
+  height: 40px;
+  width: 40px;
+  font-size: 1.4rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all 0.3s;
+}
+.wrapper .cut:hover {
+  color: #fff;
+}
+
+
+@media (max-width:600px) {
+  .accordion{
+    width: 250%;
+  }
+  
+}
+
+@media (max-width:400px) {
+  .accordion{
+    width: 200%;
+  }
+  
+}
+@media (max-width:300px) {
+  .accordion{
+    width: 100%;
+  }
+  
+}

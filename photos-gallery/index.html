@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- CSS file link -->
+  </head>
+  <body>
+    <h1>Photos <span>Gallery</span></h1>
+    <div class="gallery"></div>
+
+    <!-- 🔥 Lightbox -->
+    <div class="lightbox">
+      <div class="cross"><i class="bi bi-x"></i></div>
+
+      <img src="" class="active" alt="" />
+
+      <div class="prev">
+        <i class="bi bi-chevron-left"></i>
+      </div>
+      <div class="next">
+        <i class="bi bi-chevron-right"></i>
+      </div>
+    </div>
+
+    <button class="loadmore">More</button>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

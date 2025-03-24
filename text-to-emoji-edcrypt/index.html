@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Encrypt|Descrypt Emoji</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- CSS file link -->
+  </head>
+  <body>
+    <h1>Text <span>Encrypt | Descrypt </span>to Emoji</h1>
+
+    <div class="form-container">
+      <div class="tabs">
+        <button class="tab active" id="encrypt-btn">Encrypt</button>
+        <button class="tab" id="decrypt-btn">Decrypt</button>
+      </div>
+
+      <!-- Encrypt Form  -->
+      <form
+        class="encrypt-form active"
+        onsubmit="handleEncrypt(event)"
+        id="encrypt-form"
+      >
+        <div class="input-box">
+          <label for="" >Text</label>
+          <input type="text" id="encrypt-text" required />
+        </div>
+        <div class="input-box">
+          <label for="">Password</label>
+          <input  autocomplete="off" type="password" id="encrypt-password"  />
+          <span class="eye" id="eye1"><i class="bi bi-eye-slash"></i></span>
+        </div>
+        <input type="submit" value="Convert" />
+      </form>
+
+      <!-- Decrypt Form  -->
+      <form
+        class="decrypt-form"
+        onsubmit="handleDecrypt(event)"
+        id="decrypt-form"
+      >
+        <div class="input-box">
+          <label for="">Emoji</label>
+          <input type="text" id="decrypt-text" required />
+        </div>
+        <div class="input-box">
+          <label for="">Password</label>
+          <input autocomplete="off" type="password" id="decrypt-password" required />
+          <span class="eye" id="eye2"><i class="bi bi-eye-slash"></i></span>
+        </div>
+        <input type="submit" value="Convert" />
+      </form>
+
+      <div class="output">
+        <label for="">Output</label>
+        <div class="output-content" id="output-content"></div>
+        <span class="clipboard" id="clipboard"  
+          ><i class="bi bi-clipboard"></i></span
+        >
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
